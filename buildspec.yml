@@ -1,0 +1,19 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - cat index.html
+  build:
+    commands:
+      - sed -i -e "s/{{CODEBUILD_BUILD_NUMBER}}/$CODEBUILD_BUILD_NUMBER/g" index.html
+  post_build:
+    commands:
+      - cat index.html
+artifacts:
+  files:
+    - index.html
+    - appspec.yml
+    - scripts/cleanup_files
+    - scripts/install_dependencies
+    - scripts/start_server
+    - scripts/stop_server
