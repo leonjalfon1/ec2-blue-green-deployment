@@ -1,5 +1,16 @@
 # Blue/Green Deployment for Autoscaling Groups with CodePipeline, CodeBuild and CodeDeploy
 
+## In this tutorial:
+
+In this tutorial we will create an initial environment composed by an autoscaling group with two ubuntu machines behind a load balancer, then we will create a CI/CD pipeline to provide blue/green deployments using CodeBuild, CodeDeploy and CodePipeline. 
+
+ 1. [Prerequisites](/doc/1-prerequisites.md)
+ 2. [Setup initial environment](/doc/2-setup-initial-environment.md)
+ 3. [Configure CodeBuild](/doc/3-configure-codebuild.md)
+ 4. [Configure CodeDeploy](/doc/4-configure-codedeploy.md)
+ 5. [Configure CodePipeline](/doc/5-configure-codepipeline.md)
+ 6. [Putting all together](/doc/6-putting-all-together.md)
+ 
 ## The benefits of blue/green deployments
 
 Blue/green deployment involves two production environments:
@@ -22,17 +33,6 @@ Blue/green deployment involves two production environments:
 
  - In the first approach, AWS CodeDeploy makes a copy of an Auto Scaling group. It, in turn, provisions new Amazon EC2 instances, deploys the application to these new instances, and then redirects traffic to the newly deployed code.
  - In the second approach, you use instance tags or an Auto Scaling group to select the instances that will be used for the green environment. AWS CodeDeploy then deploys the code to the tagged instances.
-
-## In this tutorial:
-
-In this tutorial we will create an initial environment composed by an autoscaling group with two ubuntu machines behind a load balancer, then we will create a CI/CD pipeline to provide blue/green deployments using CodeBuild, CodeDeploy and CodePipeline. 
-
- 1. [Prerequisites](/doc/1-prerequisites.md)
- 2. [Setup initial environment](/doc/2-setup-initial-environment.md)
- 3. [Configure CodeBuild](/doc/3-configure-codebuild.md)
- 4. [Configure CodeDeploy](/doc/4-configure-codedeploy.md)
- 5. [Configure CodePipeline](/doc/5-configure-codepipeline.md)
- 6. [Putting all together](/doc/6-putting-all-together.md)
 
 ## References
 
