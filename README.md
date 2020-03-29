@@ -1,4 +1,4 @@
-# Blue/Green Deployment for Autoscaling Groups with CodePipeline and CodeDeploy
+# Blue/Green Deployment for Autoscaling Groups with CodePipeline, CodeBuild and CodeDeploy
 
 ## The benefits of blue/green deployments
 
